@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">EMS</string>
+    <string name="hintEmail">Email</string>
+    <string name="hintPassword">PASSWORD</string>
+    <string name="hintSearch">"Search here"</string>
+    <string name="btnSignin">Sign in</string>
+    <string name="no_data_msg">No Data is available</string>
+    <string name="equipments">Equipments</string>
+    <string name="error_msg">"Some internal issues have been occurred, please try again later! "</string>
+    <string name="about_text">
+        EMS is a mobile and web-based application that makes easier communication process between manager and employee or supervisor and subordinate. Our app helps manager or supervisor to keep track tasks of owners and their employee or subordinates. Through our app user can create minutiae schedules which assure our users to make use of their office hours more efficiently. Workopolo is a very simple and user-friendly app currently available in the apple store.
+
+Features:
+• Reporting made easy.
+• Creating schedule.
+• Supervisor can assign tasks to subordinates by setting a brief schedule.
+• Subordinates get notified when supervisor assigns a task.
+• Schedule contains the time, location, and brief of the task. (Check-in, checkout etc.)
+• Supervisor gets notified of different timing or location by subordinates.
+• Supervisors can see own schedule history and subordinates schedule history.
+• Subordinates can create their own schedule and request for supervisor approval.
+• Subordinate can only see his or her schedule history.
+
+Continued use of GPS running in the background can dramatically decrease battery life. Workopolo does not run GPS in the background unless you give us permission.
+    </string>
+
+    <string name="login_terms_writeup">By signing in, you agree to our <a href="http://app.btracsolutions.com/EMS_APP/ems_terms_and_conditions.html">Terms and \n Conditions</a> and acknowledge that you \n have read our<a href="http://app.btracsolutions.com/EMS_APP/ems_privacy_policy.html"> Privacy Policy.</a></string>
+
+</resources>

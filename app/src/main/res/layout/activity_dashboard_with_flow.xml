@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@null"
+    android:background="@color/background"
+    tools:context=".Activities.DashboardWithFlow">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/home_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_marginLeft="@dimen/text_margin_20"
+            android:layout_marginRight="@dimen/text_margin_20"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/searchLL"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/searchIcon"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/search_ic"/>
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/tvCarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="EMS"
+                android:textStyle="bold"
+                android:textColor="@color/tab_text_color"
+                android:textSize="@dimen/text_margin_20" />
+
+            <RelativeLayout
+                android:id="@+id/notificationRL"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+
+                android:layout_toLeftOf="@+id/logoutLL"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/notification_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/notification_ios"
+                    android:layout_centerInParent="true"/>
+
+
+
+
+                <TextView
+                    android:id="@+id/badge_notification_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/notification_icon"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/badge_background"
+                    android:gravity="center"
+                    android:padding="2dp"
+
+                    android:text="10"
+                    android:textColor="#ffffff"
+                    android:textSize="9sp"
+                    android:layout_alignParentTop="true"
+                    android:visibility="gone" />
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/logoutLL"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/logoutIcon"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/logout"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/text_margin_20"
+        android:layout_marginRight="@dimen/text_margin_20"
+        android:paddingLeft="@dimen/text_margin_10"
+        android:paddingRight="@dimen/text_margin_10"
+        android:background="@drawable/rounded_count_layout"
+        android:id="@id/countLL">
+
+        <ProgressBar
+            android:id="@+id/prgbarCount"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/card_background_color"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/text_margin_10"
+            android:id="@+id/countTV"
+            android:textSize="@dimen/text_margin_20"
+            android:text="0"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/countTV"
+            android:id="@+id/equipmentTV"
+            android:textColor="@color/card_background_color"
+            android:textSize="@dimen/text_margin_12"
+            android:text="@string/equipments"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/percentageLL">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/card_background_color"
+                android:textSize="@dimen/text_margin_12"
+                android:id="@+id/activeEquipTV"
+                android:layout_alignParentLeft="true"
+                android:text="0 Active"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/card_background_color"
+                android:textSize="@dimen/text_margin_12"
+                android:id="@+id/percentageTV"
+                android:layout_alignParentRight="true"
+                android:text="0%"/>
+
+
+            <ProgressBar
+                android:id="@+id/simpleProgressBar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:layout_below="@+id/activeEquipTV"
+                android:progress="0"
+                android:layout_marginBottom="@dimen/text_margin_10"
+                android:progressTint="@color/card_background_color"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                />
+
+        </RelativeLayout>
+
+        <!--true value for indeterminate-->
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/text_margin_20"
+        android:layout_marginTop="@dimen/text_margin_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countLL">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/text_margin_20"
+        android:layout_marginRight="@dimen/text_margin_20"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryRV" />
+
+    <ProgressBar
+        android:id="@+id/prgbar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

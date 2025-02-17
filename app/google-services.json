@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1057634956950",
+    "project_id": "seven-968f2",
+    "storage_bucket": "seven-968f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057634956950:android:ce534e6a1e9f9284f674b7",
+        "android_client_info": {
+          "package_name": "com.btracsolutions.ems"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH9JEPWrwDJ03mA6w-GWSe7fFKarRVkig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
